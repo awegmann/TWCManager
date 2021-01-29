@@ -28,6 +28,7 @@ To enable TWCManager to gather the solar generation information that it requires
 | [HTTPControl](docs/modules/Control_HTTP.md) | Available v1.1.3 | Allows control via embedded HTTP server (with RESTful API interface) |
 | [MQTTControl](docs/modules/Control_MQTT.md) | Available v1.1.2 | Allows control via MQTT |
 | [WebIPCControl](docs/modules/Control_WebIPC.md) | Available v1.1.4 | Allows control via PHP scripts (sysv IPC) |
+| [KNXControl](docs/modules/Control_KNX.md) | Available v1.2.1 | Allows control via KNX (IP Gateway) |
 
 ### EMS Interfaces
 
