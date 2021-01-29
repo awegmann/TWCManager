@@ -49,17 +49,17 @@ is entered.
 The following table shows, which payload type is expected on the two different addresses and
 what the unit of the values are.
 
-| Address                  | Type   | Unit     |
-|--------------------------|--------|----------|
-| chargeNowRateAddress     | UINT8  | Amps     |
-| chargeNowDurationAddress | UINT16 | Seconds  |
+| Address                  | Type    | Unit                               |
+|--------------------------|---------|------------------------------------|
+| chargeNowRateAddress     | FLOAT32 | Amps (converted to int internally) |
+| chargeNowDurationAddress | UINT16  | Seconds                            |
 
 ### Example
 
 If you want to start "charge now" for ten hours with 16 Amps, you have to
 
 1. send a packet to *chargeNowDurationAddress* with the UINT16 value of '36000'
-2. send a packet to *chargeNowRateAddress* with the UINT8 value of '16'
+2. send a packet to *chargeNowRateAddress* with the FLOAT32 value of '16.0'
 
 There is now timeout after a packet to *chargeNowDurationAddress*. The duration received
 is just stored in memory and used for the next packet to *chargeNowRateAddress* which then triggers

@@ -140,7 +140,7 @@ class KNXControl:
                              f"Comparing with {self.chargeNowRateAddress} and {self.chargeNowDurationAddress}")
 
         if self.is_valid_chargenow_cmd(packet, self.chargeNowRateAddress):
-            amps = knxdclient.decode_value(packet.payload.value, knxdclient.KNXDPT.UINT8)
+            amps = int(knxdclient.decode_value(packet.payload.value, knxdclient.KNXDPT.FLOAT32))
             if amps == 0:
                 self.master.debugLog(1, "KNXControl", f"Got chargeNowRate of 0. canceling charge.")
                 self.master.resetChargeNowAmps()
