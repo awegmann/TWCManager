@@ -187,6 +187,7 @@ class KNXControl:
         self.master.debugLog(8, "KNXControl", "registerd handler")
         while True:
             try:
+                self.master.debugLog(8, "KNXControl", f"trying to connect to {self.gatewayIP}:{self.gatewayPort}")
                 await connection.connect(host=self.gatewayIP, port=self.gatewayPort)
                 self.master.debugLog(8, "KNXControl", "connected")
 
