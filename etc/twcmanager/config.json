@@ -232,6 +232,14 @@
         "topicPrefix": "TWC",
         "username": "mqttuser",
         "password": "mqttpass"
+      },
+      "KNX": {
+        "enabled": false,
+        "gatewayIP": "172.16.0.1",
+        "gatewayPort": 6720,
+        "chargeNowDurationAddress": "1/1/10",
+        "chargeNowDurationDefault": 3600,
+        "chargeNowRateAddress": "1/1/11",
       }
     },
 

@@ -60,6 +60,7 @@ modules_available = [
     "Control.WebIPCControl",
     "Control.HTTPControl",
     "Control.MQTTControl",
+    "Control.KNXControl",
     "EMS.Enphase",
     "EMS.Fronius",
     "EMS.HASS",
