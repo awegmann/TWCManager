@@ -187,7 +187,7 @@ class KNXControl:
         self.master.debugLog(8, "KNXControl", "registerd handler")
         while True:
             try:
-                await connection.connect()
+                await connection.connect(host=self.gatewayIP, port=self.gatewayPort)
                 self.master.debugLog(8, "KNXControl", "connected")
 
                 run_task = asyncio.create_task(connection.run())
